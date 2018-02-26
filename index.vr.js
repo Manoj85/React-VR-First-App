@@ -11,7 +11,7 @@ import {
 
 import Lightning from './components/Lightning';
 import Wall from './components/Wall';
-import Button from './components/Button';
+import UI from './components/UI';
 import Image from './components/Image';
 import World from "./components/World";
 
@@ -73,7 +73,7 @@ export default class WelcomeToVR extends React.Component {
               index={4}
               length={5} />
 
-          <Button/>
+          <UI/>
 
       </View>
     );
