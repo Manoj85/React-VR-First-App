@@ -5,11 +5,11 @@ import {
     Pano,
     Text,
     View,
-    Model,
-    AmbientLight,
-    PointLight
+    Model
+
 } from 'react-vr';
 
+import Lightning from './components/Lightning';
 import Wall from './components/Wall';
 import Button from './components/Button';
 import Image from './components/Image';
@@ -18,7 +18,7 @@ export default class WelcomeToVR extends React.Component {
   render() {
     return (
       <View>
-          <AmbientLight intensity={ 1.2 }/>
+          <Lightning />
           <Model
               style={{
                   transform: [
@@ -73,10 +73,6 @@ export default class WelcomeToVR extends React.Component {
 
           <Button/>
 
-          <PointLight intensity={0.25}
-                      style={{
-                          color:'#ffffff',
-                          transform:[{translate : [0, 4, 0.25]}]}} />
       </View>
     );
   }
