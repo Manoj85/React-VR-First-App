@@ -33,8 +33,8 @@ class Image extends React.Component {
                     ]
                 }}
                 source={{
-                    obj: asset('cube_wall.obj'),
-                    mtl: asset('cube_wall.mtl'),
+                    obj: asset('bg/cube_wall.obj'),
+                    mtl: asset('bg/cube_wall.mtl'),
                     texture: asset(texture),
                     lit: true
                 }}

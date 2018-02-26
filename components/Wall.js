@@ -10,8 +10,8 @@ class Wall extends React.Component {
 
     render() {
         let scale = this.props.scale,
-            srcWallMat = {obj:asset('cube_wall.obj'), mtl:asset('cube_wall.mtl'), lit: true},
-            srcWindowMat = {obj:asset('cube_window.obj'), mtl:asset('cube_window.mtl'), lit: true},
+            srcWallMat = {obj:asset('bg/cube_wall.obj'), mtl:asset('bg/cube_wall.mtl'), lit: true},
+            srcWindowMat = {obj:asset('bg/cube_window.obj'), mtl:asset('bg/cube_window.mtl'), lit: true},
             translate = this.props.translate,
             wall = null;
 

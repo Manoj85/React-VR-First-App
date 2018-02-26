@@ -18,8 +18,8 @@ class Button extends React.Component {
                     ]
                 }}
                 source={{
-                    obj: asset('cube_idle.obj'),
-                    mtl: asset('cube_idle.mtl'),
+                    obj: asset('bg/cube_idle.obj'),
+                    mtl: asset('bg/cube_idle.mtl'),
                     lit: true
                 }}
             />
