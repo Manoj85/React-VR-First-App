@@ -73,7 +73,20 @@ export default class WelcomeToVR extends React.Component {
               index={4}
               length={5} />
 
-          <UI/>
+          <UI
+              onScrollLeftBegin={() => {
+                  this.setState({ scrolling: 'left' });
+              }}
+              onScrollRightBegin={() => {
+                  this.setState({ scrolling: 'right' });
+              }}
+              onScrollLeftEnd={() => {
+                  this.setState({ scrolling: 'none' });
+              }}
+              onScrollRightEnd={() => {
+                  this.setState({ scrolling: 'none' });
+              }}
+          />
 
       </View>
     );
