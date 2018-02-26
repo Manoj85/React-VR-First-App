@@ -13,13 +13,15 @@ import Lightning from './components/Lightning';
 import Wall from './components/Wall';
 import Button from './components/Button';
 import Image from './components/Image';
+import World from "./components/World";
 
 export default class WelcomeToVR extends React.Component {
   render() {
     return (
       <View>
           <Lightning />
-          <Model
+          <World/>
+          {/*<Model
               style={{
                   transform: [
                       {scale: [1, 1, 1]}
@@ -30,7 +32,7 @@ export default class WelcomeToVR extends React.Component {
                   mtl: asset('bg/cube_sky.mtl'),
                   lit: true
               }}
-          />
+          />*/}
           <Wall
               translate={[0, 0.2, -1]}
               scale={[1, 0.4, 0.001]} />
