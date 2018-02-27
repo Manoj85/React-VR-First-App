@@ -22,9 +22,9 @@ class World extends React.Component {
                    }}
                    source={{
                        obj: asset('bg/cylinder_earth.obj'),
-                       mtl: asset('bg/cylinder_earth.mtl'),
-                       lit: true
+                       mtl: asset('bg/cylinder_earth.mtl')
                    }}
+                   lit={true}
                />
            </View>
         );

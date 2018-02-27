@@ -10,8 +10,8 @@ class Wall extends Component {
 
     render() {
         let scale = this.props.scale,
-            srcWallMat = {obj:asset('bg/cube_wall.obj'), mtl:asset('bg/cube_wall.mtl'), lit: true},
-            srcWindowMat = {obj:asset('bg/cube_window.obj'), mtl:asset('bg/cube_window.mtl'), lit: true},
+            srcWallMat = {obj:asset('bg/cube_wall.obj'), mtl:asset('bg/cube_wall.mtl')},
+            srcWindowMat = {obj:asset('bg/cube_window.obj'), mtl:asset('bg/cube_window.mtl')},
             translate = this.props.translate,
             wall = null;
 
@@ -22,6 +22,7 @@ class Wall extends Component {
                                     {scale: scale}
                                 ]
                             }}
+                          lit={true}
                           source={srcWindowMat}
                     />;
         } else {
@@ -31,6 +32,7 @@ class Wall extends Component {
                                     {scale: scale}
                                 ]
                             }}
+                          lit={true}
                           source={srcWallMat}
                     />;
         }

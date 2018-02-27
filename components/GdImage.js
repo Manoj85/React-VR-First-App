@@ -23,8 +23,7 @@ class GdImage extends React.Component {
                         {translate: [0, 0, 0]},
                     ]
                 }}>
-                <Image
-                    style={{
+                <Image style={{
                         margin: 0.05,
                         width: imageWidth,
                         height: imageWidth

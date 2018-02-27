@@ -19,7 +19,7 @@ class GdImages extends React.Component {
             translation: 0,
         };
         this.imageWidth = 3.2;
-        this.scrollBorder = 6.6;
+        this.scrollBorder = 5;
     }
 
     componentWillReceiveProps(nextProps) {
@@ -68,7 +68,7 @@ class GdImages extends React.Component {
         let images = [],
             imagesConfig = [
                 {
-                    texture: require('../static_assets/images/1.jpg')
+                    texture: require('../static_assets/images/1a.jpg')
                 },
                 {
                     texture: require('../static_assets/images/2.jpg')
@@ -84,18 +84,17 @@ class GdImages extends React.Component {
                 }
             ],
             numberOfImages = 4,
-            view = <View
-                style={{
-                    alignItems: 'center',
-                    flexDirection: 'row',
-                    transform: [
-                        {translateX: 0},
-                    ]
-                }}>
-                {images}
-            </View>;
+            view = <View style={{
+                            alignItems: 'center',
+                            flexDirection: 'row',
+                            transform: [
+                                { translateX: 0 }
+                            ]
+                        }}>
+                        {images}
+                    </View>;
 
-        for (let i = 0; i < numberOfImages; i += 1) {
+        for (let i = 0; i < numberOfImages; i++) {
             images.push(
                 <GdImage
                     key={i}
