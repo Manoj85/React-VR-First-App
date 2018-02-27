@@ -10,7 +10,13 @@ import Button from './Button'
 
 class UI extends React.Component {
 
+    constructor() {
+        super();
+    }
+
     render() {
+
+
         return (
            <View style={{
                flex: 1,
@@ -22,7 +28,7 @@ class UI extends React.Component {
                ]
            }}>
                <Button alignment={'left'}
-                       onClick={() => { this.props.onScrollLeftBegin();}}
+                       onClick={() => { this.props.onScrollLeftBegin();} }
                        onInteractionEnd={ () => { this.props.onScrollLeftEnd(); }}
                />
 

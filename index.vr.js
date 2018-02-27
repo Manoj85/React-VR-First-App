@@ -10,82 +10,35 @@ import {
 } from 'react-vr';
 
 import Lightning from './components/Lightning';
-import Wall from './components/Wall';
+import Room from './components/Room';
 import UI from './components/UI';
-import Image from './components/Image';
+import GdImages from './components/GdImages';
 import World from "./components/World";
 
 export default class WelcomeToVR extends React.Component {
+
+    constructor() {
+        super();
+
+        this.state = {
+            scrolling: 'none'
+        };
+    }
+
   render() {
     return (
       <View>
           <Lightning />
           <World/>
-          {/*<Model
-              style={{
-                  transform: [
-                      {scale: [1, 1, 1]}
-                  ]
-              }}
-              source={{
-                  obj: asset('bg/cube_sky.obj'),
-                  mtl: asset('bg/cube_sky.mtl'),
-                  lit: true
-              }}
-          />*/}
-          <Wall
-              translate={[0, 0.2, -1]}
-              scale={[1, 0.4, 0.001]} />
-          <Wall
-              translate={[-1, 0.2, 0]}
-              scale={[0.001, 0.4, 1]}
-              hasWindow={true} />
-          <Wall
-              translate={[1, 0.2, 0]}
-              scale={[0.001, 0.4, 1]}
-              hasWindow={true} />
-          <Wall
-              translate={[0, 0.2, 1]}
-              scale={[1, 0.4, 0.001]}
-              hasWindow={true} />
-          <Wall
-              translate={[0, -0.2, 0]}
-              scale={[1, 0.001, 1]} />
+          <Room/>
 
-          <Image
-              texture={'1.jpg'}
-              index={0}
-              length={5} />
-          <Image
-              texture={'2.jpg'}
-              index={1}
-              length={5} />
-          <Image
-              texture={'3.jpg'}
-              index={2}
-              length={5} />
-          <Image
-              texture={'4.jpg'}
-              index={3}
-              length={5} />
-          <Image
-              texture={'5.jpg'}
-              index={4}
-              length={5} />
+          <GdImages scrolling={this.state.scrolling} />
 
           <UI
-              onScrollLeftBegin={() => {
-                  this.setState({ scrolling: 'left' });
-              }}
-              onScrollRightBegin={() => {
-                  this.setState({ scrolling: 'right' });
-              }}
-              onScrollLeftEnd={() => {
-                  this.setState({ scrolling: 'none' });
-              }}
-              onScrollRightEnd={() => {
-                  this.setState({ scrolling: 'none' });
-              }}
+              onScrollLeftBegin={() => { this.setState({ scrolling: 'left' }); }}
+              onScrollRightBegin={() => { this.setState({ scrolling: 'right' }); }}
+              onScrollLeftEnd={() => { this.setState({ scrolling: 'none' }); }}
+              onScrollRightEnd={() => { this.setState({ scrolling: 'none' }); }}
           />
 
       </View>

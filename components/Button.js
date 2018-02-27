@@ -17,7 +17,7 @@ class Button extends React.Component {
         super();
 
         this.state = {
-            buttonColor: 0x9CCECC80,
+            buttonColor: 'red',
             hasFocus: false,
             lastTimeoutId: 0,
             scrolling: false,
@@ -73,7 +73,7 @@ class Button extends React.Component {
         return (
             <VrButton
                 style={{
-                    backgroundColor: this.state.buttonColor,
+                    backgroundColor: 'red',
                     width: 1,
                     margin: 0.1
                 }}

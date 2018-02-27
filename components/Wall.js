@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import {
     View,
@@ -6,7 +6,7 @@ import {
     asset
 } from 'react-vr';
 
-class Wall extends React.Component {
+class Wall extends Component {
 
     render() {
         let scale = this.props.scale,
@@ -15,24 +15,24 @@ class Wall extends React.Component {
             translate = this.props.translate,
             wall = null;
 
-        if (this.props.hasWindow && this.props.hasWindow === true) {
-            wall = <Model
-                style={{
-                    transform: [
-                        {translate: translate},
-                        {scale: scale}
-                    ]
-                }}
-                source={srcWindowMat} />;
+        if (this.props.hasWindow) {
+            wall = <Model style={{
+                                transform: [
+                                    {translate: translate},
+                                    {scale: scale}
+                                ]
+                            }}
+                          source={srcWindowMat}
+                    />;
         } else {
-            wall = <Model
-                style={{
-                    transform: [
-                        {translate: translate},
-                        {scale: scale}
-                    ]
-                }}
-                source={srcWallMat} />;
+            wall = <Model style={{
+                                transform: [
+                                    {translate: translate},
+                                    {scale: scale}
+                                ]
+                            }}
+                          source={srcWallMat}
+                    />;
         }
 
         return (
